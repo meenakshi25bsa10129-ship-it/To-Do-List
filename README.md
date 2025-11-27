@@ -1,15 +1,65 @@
-PASSWORD_STRENGTH_DETECTOR
-OVERVIEW: This project gives you a solid password strength checker built into one Python function - no extra tools needed. It works by checking how long the password is while also looking at what kinds of characters are used. Instead of relying on outside packages, it runs on its own. The score depends partly on length, partly on variety like numbers or symbols mixed in.
+To-Do_List
+To Do List is a single page web app that lets users manage a simple list of tasks. Users can add and remove tasks from the list. It was coded using a single standard technology named Python.
 
-FEATURES: Standalone: Works without extra tools or add-ons. Pure Python: relies solely on string tools like isupper or isdigit, also uses any(); nothing extra added. Tiered setup splits passwords into five groups: Very Weak, Weak, Moderate, Strong and Very Strong. Gets specific - tells you exactly what’s missing, like capital letters or symbols, so your password gets tougher. Shows gaps clearly instead of just saying it’s weak. Helps fix flaws step by step without confusion. Makes building strong passwords way easier with clear hints. Grading setup: gives a number score depending on how long it is plus how varied the content seems.
+💡 Overview of the Project
+This project is a basic, command-line interface (CLI) application developed in Python. It allows a user to manage a personal list of tasks. The application is designed for simplicity, providing core functionality like adding, viewing, and deleting tasks within an interactive loop.
 
-TECHNOLOGIES/TOOLS USED: Language: Python Development: Github Method used: String manipulation, Functions, Conditional statements
+✨ Features
+The application provides the following functionalities through a menu-driven interface:
 
-INSTALLATION AND SETUP: Since this project consists of a single function, installation involves cloning the repository and importing the function into your Python environment. Clone the Repository: Open your terminal or command prompt and run: git clone https://github.com/meenakshi25bsa10129-ship-it/PASSWORD_STRENGTH_detector.git cd Password-Strength-detector INSTRUCTION FOR TESTING: A comprehensive testing script is included to validate the scoring and feedback for various password combinations.
+Add Task (1): Allows the user to input a new task description, which is then added to the list.
+View Tasks (2): Displays all current tasks in a numbered list format.
+Delete Task (3): Prompts the user to enter the number corresponding to the task they wish to remove from the list.
+Exit (4): Closes the application.
+💻 Technologies/Tools Used
+Category	Technology/Tool	Purpose
+Programming Language	Python 3	Core language used to write the application logic.
+Data Structure	Python List (tasks)	Used to store and manage the tasks in memory.
+Control Flow	while True loop	Creates the continuous, interactive menu system.
+Input/Output	input() and print()	Handles user interaction and displays output to the console.
+⚙ Steps to Install & Run the Project
+Since this is a single-file Python script, the setup is minimal.
 
-Run Tests: To execute the test suite (assuming you are using a standard testing framework like pytest or a simple test file named test_checker.py): ->Example if using unittest or a simple execution script python test_checker.py pip install pytest pytest Expected Test Cases Ensure the following common scenarios yield the correct results: short -> 5 Very Weak mypassword -> 10 Weak MyPass123 -> 9 Moderate SecureP@ss12! -> 13 Strong ExtraLongSecurePassword42@#$ -> 28 Very Strong
+1. Prerequisites
+You must have Python 3 installed on your system.
 
-SCREENSHOTS OF OUTPUTS: 
-<img width="1378" height="90" alt="image" src="https://github.com/user-attachments/assets/8fcbae13-6959-4432-909f-45bed22c8fc7" />
-<img width="1048" height="87" alt="image" src="https://github.com/user-attachments/assets/3be57a65-2698-4c92-878c-d0e9652f3530" />
+2. Installation
+Save the Code: Copy the provided Python code and save it into a file named todo.py on your computer.
+Open Terminal: Navigate to the directory where you saved todo.py using your command prompt or terminal.
+3. Running the Project
+Execute the script using the Python interpreter:
+
+bash python todo.py
+
+The application's main menu will now appear in your terminal, and you can begin interacting with it.
+
+🧪 Instructions for Testing
+Test the application by running the script and following these steps:
+
+Test Case 1: Add and View Tasks (Options 1 & 2)
+Select option 1 (Add Task).
+Enter the task "Buy groceries".
+Select option 1 again.
+Enter the task "Finish report".
+Select option 2 (View Tasks).
+Expected Result: The output should show:
+
+--- Your Tasks ---
+
+Buy groceries
+Finish report
+Test Case 2: Delete Task (Option 3)
+Ensure you have at least two tasks (as per Test Case 1).
+Select option 3 (Delete Task).
+When prompted, enter the number 1.
+Expected Result: The console prints Task 'Buy groceries' deleted.
+Select option 2 (View Tasks).
+Expected Result: The list now only shows 1. Finish report.
+Test Case 3: Invalid Input and Exit (Options 3 & 4)
+Select option 5 (an invalid choice).
+Expected Result: The console prints Invalid choice. Please try again.
+Select option 3 (Delete Task). When prompted for the number, enter a or 5 (if only one task exists).
+Expected Result: The console prints either Invalid input. Please enter a number. or Invalid task number.
+Select option 4 (Exit).
+Expected Result: The console prints Exiting To-Do List. Goodbye! and the program terminates.
 
